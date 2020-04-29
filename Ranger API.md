@@ -1,4 +1,4 @@
-This document is a collection of all the important Atlas API needed to troubleshoot Ranger.
+This document is a collection of all the important Ranger API needed to troubleshoot Ranger issues.
 
 Note: this document is under progress.
 
