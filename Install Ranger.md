@@ -26,8 +26,8 @@ Note: when using Postgres-9.6, the file would be ```/var/lib/pgsql/9.6/data/pg_h
 su postgres -c '/usr/bin/pg_ctl -D /var/lib/pgsql/data reload'
 ```
 Note: for Postgres-9.6, restart the service:
-```
+```bash
 systemctl restart postgresql-9.6
 ```
 
-5. Proceed with the new service installation wizard in Ambari
+5. Proceed with the new service installation wizard in Ambari.
