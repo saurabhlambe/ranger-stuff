@@ -19,11 +19,15 @@ echo "local all postgres,rangerdba,rangerlogger trust
 host all postgres,rangerdba,rangerlogger 0.0.0.0/0 trust
 host all postgres,rangerdba,rangerlogger ::/0 trust" >> /var/lib/pgsql/data/pg_hba.conf
 ```
-Note: when using Postgres-9.6, the file would be /var/lib/pgsql/9.6/data/pg_hba.conf.
+Note: when using Postgres-9.6, the file would be ```/var/lib/pgsql/9.6/data/pg_hba.conf```.
 
 4. Refresh postgres configs:
 ```bash
 su postgres -c '/usr/bin/pg_ctl -D /var/lib/pgsql/data reload'
+```
+Note: for Postgres-9.6, the command is:
+```bash
+su postgres -c '/usr/pgsql-9.6/bin/pg_ctl /var/lib/pgsql/9.6/data/'
 ```
 
 5. Proceed with the new service installation wizard in Ambari
