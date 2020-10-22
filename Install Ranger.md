@@ -19,6 +19,7 @@ echo "local all postgres,rangerdba,rangerlogger trust
 host all postgres,rangerdba,rangerlogger 0.0.0.0/0 trust
 host all postgres,rangerdba,rangerlogger ::/0 trust" >> /var/lib/pgsql/data/pg_hba.conf
 ```
+Note: when using Postgres-9.6, the file would be /var/lib/pgsql/9.6/data/pg_hba.conf.
 
 4. Refresh postgres configs:
 ```bash
