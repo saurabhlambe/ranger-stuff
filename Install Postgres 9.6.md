@@ -14,3 +14,13 @@ yum install postgresql96-contrib postgresql96-server -y
 ```bash
 /usr/pgsql-9.6/bin/postgresql96-setup initdb
 ```
+
+4. Enable Postgres auto start on reboot
+```bash
+systemctl enable postgresql-9.6
+```
+
+5. Start Postgres 9.6
+```bash
+systemctl start postgresql-9.6
+```
