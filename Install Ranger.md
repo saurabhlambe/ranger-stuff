@@ -8,16 +8,16 @@ yum install postgresql-jdbc -y && chmod 644 /usr/share/java/postgresql-jdbc.jar 
 2. Create a user role, database, and set password to the user:
 ```bash
 psql
-CREATE DATABASE rangerdb;
-CREATE USER rangerdba WITH PASSWORD 'bigdata';
-GRANT ALL PRIVILEGES ON DATABASE rangerdb TO rangerdba;
+CREATE DATABASE ranger;
+CREATE USER ranger WITH PASSWORD 'bigdata';
+GRANT ALL PRIVILEGES ON DATABASE ranger TO ranger;
 ```
 
 3. Let postgres know about the users who will access the database:
 ```bash
-echo "local all postgres,rangerdba,rangerlogger trust
-host all postgres,rangerdba,rangerlogger 0.0.0.0/0 trust
-host all postgres,rangerdba,rangerlogger ::/0 trust" >> /var/lib/pgsql/data/pg_hba.conf
+echo "local all postgres,ranger,rangerlogger trust
+host all postgres,ranger,rangerlogger 0.0.0.0/0 trust
+host all postgres,ranger,rangerlogger ::/0 trust" >> /var/lib/pgsql/data/pg_hba.conf
 ```
 Note: when using Postgres-9.6, the file would be ```/var/lib/pgsql/9.6/data/pg_hba.conf```.
 
