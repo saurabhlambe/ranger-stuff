@@ -27,3 +27,5 @@ su - postgres bash -c "psql -c \"CREATE DATABASE $db;\""
 su - postgres bash -c "psql -c \"CREATE USER $user WITH PASSWORD 'bigdata';\""
 su - postgres bash -c "psql -c \"GRANT ALL PRIVILEGES ON DATABASE $db TO $user;\""
 su - postgres bash -c 'psql -c \\list'
+
+# All you got to do is install Ranger using Ambari and specify the above details (database, username, password, hostname, etc)
