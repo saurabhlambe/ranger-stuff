@@ -1,4 +1,4 @@
-Here's how to quickly install Ranger in your HDP cluster. Here we shall user Postgres as the back-end database for Ranger.
+Here's how to quickly install Ranger in your HDP cluster. Use this bash [script](https://gitlab.com/saurabhlambe/Ranger-stuff/-/blob/01f5a8da2b704aa7899ce0ddcecf3c4680ad5fc0/install_postgres_9_6.sh) to install Postgres-9.6 or follow these steps to install it manually.
 
 1. Install the Postgres JDBC driver and let Ambari server know about it:
 ```bash
